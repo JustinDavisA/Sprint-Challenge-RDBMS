@@ -34,19 +34,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. Explain the difference between `RDBMS` and `SQL`.
 
-#.
+#. The RDBMS is the client, more akin to a IDE that manages all things data while SQL is the actualy querying language used to manage databases.
 
 1. Why do tables need a `primary key`?
 
-#.
+#. Primary key is usually used to handle specified data from a schema or database. The ID allwows you to specifically and consistently grab the data you want with no overlap (via incrementation).
 
 1. What is the name given to a table column that references the primary key on another table.
 
-#. 
+#. You use what's called a foreign key to reference another tables primary keys.
 
 1. What do we need in order to have a _many to many_ relationship between two tables.
 
-#.
+#. We need two tables with data that references eachother and usually a join or a table containing foreign keys for both included datasets.
 
 ## Project Set Up
 
