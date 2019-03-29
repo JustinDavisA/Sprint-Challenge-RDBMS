@@ -15,7 +15,12 @@ exports.up = function(knex, Promise) {
             .defaultTo(false);
 
         tbl
-            .integer('project_id').unsigned().references('id').inTable('projects')
+            .integer('project_id')
+            .unsigned()
+            .references('id')
+            .inTable('projects')
+            .onDelete('CASCADE')
+            .onUpdate('CASCADE')
             .notNullable();
     });
 };
