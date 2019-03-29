@@ -30,6 +30,17 @@ server.get('/api/projects/:id', async (req, res) => {
   }
 });
 
+server.get('/api/projects/:id', async (req,res) => {
+  try {
+      const project = await Projects.findById(req.params.id)
+      const actionsArray = await Actions.getActionsbyProject(req.params.id)
+      const modified = {...project, actions: actionsArray}
+      res.status(200).json(modified)
+  } catch (error) {
+      res.status(500).json(error)
+  }
+})
+
 const errors = {
   '19': 'Another record with that value exists',
 };
