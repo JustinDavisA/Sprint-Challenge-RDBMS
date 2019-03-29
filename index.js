@@ -68,10 +68,6 @@ server.get('/api/actions/:id', async (req, res) => {
   }
 });
 
-const errors = {
-  '19': 'Another record with that value exists',
-};
-
 server.post('/api/actions', async (req, res) => {
   try {
     const [id] = await db('actions').insert(req.body);
